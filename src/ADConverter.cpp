@@ -5,7 +5,6 @@
 #include "ADConverter.h"
 
 ADConverter::ADConverter() {
-    PRR |= (0 << PRADC);
     ADCSRA = (1 << ADEN) | 0b00000111; // prescaler;
 
 }

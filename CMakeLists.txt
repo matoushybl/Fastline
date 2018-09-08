@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-project(fastline)
+project(Fastline)
 
 include(CMakeListsPrivate.txt)
 
@@ -51,4 +51,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(${PROJECT_NAME} ${SRC_LIST} src/Motors.cpp src/Motors.h src/io.h src/Registers.cpp src/Registers.h src/ADConverter.cpp src/ADConverter.h src/CalibrationData.cpp src/CalibrationData.h)
+add_executable(${PROJECT_NAME} ${SRC_LIST} src/Serial.cpp src/Serial.h)

@@ -8,29 +8,21 @@
 #include <inttypes.h>
 #include "Registers.h"
 
-#define LeftEnable SPORTD.P6
-#define LeftForward SPORTD.P2
-#define LeftBackward SPORTD.P3
+#define Left SPORTB.P0
 
-#define RightEnable SPORTD.P5
-#define RightForward SPORTD.P4
-#define RightBackward SPORTD.P7
+#define Right SPORTD.P7
 
 class Motors {
 
 public:
     Motors();
-    void forward();
-    void backward();
-    void rotateLeft();
-    void rotateRight();
-    void turnLeft();
-    void turnRight();
-    void setLeftSpeed(uint8_t speed);
-    void setRightSpeed(uint8_t speed);
-    void setSpeed(uint8_t speed);
-    void setSpeeds(uint8_t leftSpeed, uint8_t rightSpeed);
-
+    void forward(uint8_t leftSpeed = 0xff, uint8_t rightSpeed = 0xff);
+    void backward(uint8_t leftSpeed = 0xff, uint8_t rightSpeed = 0xff);
+    void rotateLeft(uint8_t leftSpeed = 0xff, uint8_t rightSpeed = 0xff);
+    void rotateRight(uint8_t leftSpeed = 0xff, uint8_t rightSpeed = 0xff);
+    void turnLeft(uint8_t speed = 0xff);
+    void turnRight(uint8_t speed = 0xff);
+    void stop();
 };
 
 
